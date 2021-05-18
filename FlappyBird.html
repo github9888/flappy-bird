@@ -118,6 +118,14 @@ function drawPipe() {
         }
 }
 
+function collisionPipe() {
+    if(bird.x + bird.size >= pipe[0].x && bird.y >= pipe[0].y) {
+        alert("lost");
+    }
+
+}
+
+
 
 
 document.addEventListener("keydown", function(event) {
@@ -146,6 +154,7 @@ function draw() {
 
 function update() {
     gravityGame();
+    collisionPipe()
 }
 
 function game() {
